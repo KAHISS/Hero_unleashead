@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  max-width: 250px;
+}
+/* manipulando os textos e botões de todos conteudos */
+.titleText {
+  color: #c21818;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+.contentText {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Fredoka", Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+.navBtnContent {
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  border: 3px black solid;
+  transform: skewx(-10deg);
+  transition: transform 0.4s;
+  cursor: pointer;
+}
+.navBtnContent:hover {
+  transform: scale(1.2) skew(-10deg, 1deg);
+}
+
+/* Manipulando o container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* Manipulando tudo do header */
+.header {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+  gap: 10px;
+  background-color: #751010;
+  border-bottom: 5px solid #4e0b0b;
+}
+.logoHeader {
+  width: 120px;
+  padding: 20px;
+  transition: 0.4s;
+}
+.logoHeader:hover {
+  transform: scale(1.5);
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.navbarButton {
+  padding: 8px;
+  font-size: 20px;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.navbarButton:hover {
+  color: #ff3131;
+  border-bottom: 3px solid #0579f4;
+}
+
+/* Manipulando a apresentação */
+.apresentation {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to top, black, transparent), url("./imagens/banner1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 20px;
+  gap: 20px 10px;
+}
+.textApresentation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+.titleApresentation {
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 3em;
+  -webkit-text-stroke: 0.0001em black;
+}
+.paragraphApresentation {
+  font-family: "Fredoka", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.2em;
+}
+.buttonsLogin {
+  padding-top: 5px;
+  display: flex;
+  gap: 20px;
+}
+.btnLogin {
+  width: 150px;
+  padding: 10px;
+  background-color: #721111;
+  color: #faea08;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 20px;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+}
+.btnLogin:active {
+  transform: scale(0.9);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LogoComplet {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Manipulando tudo do mainContainer */
+.mainContainer {
+  width: 100%;
+  min-height: 200px;
+  padding: 30px;
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  gap: 15px;
+  grid-template-areas:
+    "createHeroContent createHeroContent empty1"
+    "empty2 raffleHeroContent raffleHeroContent"
+    "DuelHerosContent DuelHerosContent empty3";
+}
+
+.createHeroContent {
+  background-image: url("./imagens/fundoVermelho.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 5px solid black;
+  transform: skew(1.25deg);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  grid-area: createHeroContent;
+}
+.informationTextCreateHero {
+  padding: 10px;
+  background-color: #e4a908;
+  border: 3px solid black;
+  transform: skew(-1.25deg);
+}
+.navCreateHeroCard {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.raffleHeroContent {
+  background-image: url("./imagens/fundoVerde.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 5px solid black;
+  transform: skew(-1.25deg);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  grid-area: raffleHeroContent;
+}
+.informationTextRaffleHero {
+  padding: 10px;
+  background-color: #e4a908;
+  border: 3px solid black;
+  transform: skew(1.25deg);
+}
+.navRaffleHeroCard {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-self: self-end;
+}
+.hulkImg {
+  max-width: 240px;
+  height: 300px;
+}
+.DuelHerosContent {
+  background-image: url("./imagens/fundoAzulVermelho.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: 5px solid black;
+  transform: skew(1.25deg);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  grid-area: DuelHerosContent;
+}
+.informationTextDuelHero {
+  padding: 10px;
+  background-color: #e4a908;
+  border: 3px solid black;
+  transform: skew(-1.25deg);
+}
+
+.navDuelHeroCard {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Manipulando o footer */
+.footer {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  gap: 30px;
+  background-color: #751010;
+  border-top: 5px solid #4e0b0b;
+}
+.logoFooter {
+  width: 120px;
+  padding: 20px;
+}
+.copyright {
+  color: white;
+  font-size: 20px;
+}
+.BackToTop {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  text-decoration: double;
+  transition: 0.4s;
+}
+.BackToTop:hover {
+  color: #ff3131;
+  border-bottom: 3px solid #0579f4;
+}
+
+/* estilizando a scroll-bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bb8b07;
+  padding: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #530c0c;
+}
+
+@media (max-width: 2560px) {
+  .header {
+    justify-content: space-between;
+  }
+  .titleText {
+    text-align: left;
+    font-size: 30px;
+  }
+  .contentText {
+    text-align: left;
+    font-size: 25px;
+  }
+  .createHeroContent {
+    justify-content: space-around;
+  }
+  .raffleHeroContent {
+    justify-content: space-around;
+  }
+  .informationTextCreateHero {
+    width: 65%;
+    height: 350px;
+    overflow: hidden auto;
+  }
+  .informationTextRaffleHero {
+    width: 65%;
+    height: 350px;
+    overflow: auto;
+  }
+  .informationTextDuelHero {
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+  }
+  .footer {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+  }
+  .textApresentation {
+    width: 70%;
+  }
+  .mainContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "createHeroContent createHeroContent"
+      "raffleHeroContent raffleHeroContent"
+      "DuelHerosContent DuelHerosContent";
+  }
+  .createHeroContent {
+    justify-content: center;
+    transform: skew(0deg);
+  }
+  .raffleHeroContent {
+    justify-content: center;
+    transform: skew(0deg);
+  }
+  .DuelHerosContent {
+    background-image: url("./imagens/fundoAzulVermelhoVertical.jpg");
+    transform: skew(0deg);
+  }
+  .informationTextCreateHero {
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+    transform: skew(0deg);
+  }
+  .informationTextRaffleHero {
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+    transform: skew(0deg);
+  }
+  .informationTextDuelHero {
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+    transform: skew(0deg);
+  }
+  .navDuelHeroCard {
+    flex-direction: column;
+  }
+}
+@media (max-width: 460px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+  }
+  .titleApresentation {
+    font-size: 2em;
+    width: 100%;
+  }
+  .paragraphApresentation {
+    display: none;
+  }
+  .navbarButton {
+    font-size: 23px;
+  }
+  .navDuelHeroCard {
+    flex-direction: column;
+  }
+  [alt="ilustrationImg"] {
+    display: none;
+  }
+  .navBtnContent {
+    font-size: 25px;
+  }
+  .footer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .BackToTop {
+    text-align: center;
+  }
+  .titleText {
+    text-align: center;
+    font-size: 16px;
+  }
+  .contentText {
+    text-align: left;
+    font-size: 16px;
+  }
+}
