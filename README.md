@@ -12,4 +12,4 @@ Fazer uma plataforma para pessoas se divertirem criando seus próprios personage
 ## Veja mais projetos
 Confira meu perfil em [KAHISS](https://github.com/KAHISS)
 
-### Desperte sua imaginação!!!
+### Desperte e deixe sua imaginação!!!
